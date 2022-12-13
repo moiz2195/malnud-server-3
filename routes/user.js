@@ -20,8 +20,12 @@ const result=await cloudinary.v2.uploader.upload(req.body.id_front,{
 const result2=await cloudinary.v2.uploader.upload(req.body.id_back,{
     folder:'id'
 })
+const result3=await cloudinary.v2.uploader.upload(req.body.profile,{
+    folder:'profile'
+});
 req.body.Id_back={url:result2.url,public_id:result2.public_id}
 req.body.Id_front={url:result.url,public_id:result.public_id}
+req.body.profile={url:result3.url,public_id:result3.public_id}
 const newuser=await usermodel.create(req.body);
 res.status(201).json({success:true,newuser});
 }))
