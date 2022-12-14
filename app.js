@@ -5,10 +5,10 @@ const cors=require('cors')
 const cloudinary=require('cloudinary')
 const bodyParser=require('body-parser')
 const errorMiddleware=require('./middlewares/errorhandler.js')
-app.use(cors())
-// app.use(cors({
-//   origin : 'http://malnud.wisemonk.xyz',
-// }))
+// app.use(cors())
+app.use(cors({
+  origin : 'http://malnad.wisemonk.xyz',
+}))
 connecttomongo();
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit: 50000}));
