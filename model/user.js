@@ -31,26 +31,38 @@ const userSchema=new mongoose.Schema({
     },
     Id_front:{
       public_id:{
-        type:String,
-        required:true
+        type:String
       },
       url:{
-        type:String,
-        required:true
+        type:String
       }
     },
     Id_back:{
       public_id:{
-        type:String,
-        required:true
+        type:String
       },
       url:{
-        type:String,
-        required:true
+        type:String
       }
     },
     address:{
    type:String,
+   required:true
+    },
+    profession:{
+   type:String,
+   required:true
+    },
+    gnumber:{
+   type:Number,
+   required:true
+    },
+    grelation:{
+   type:String,
+   required:true
+    },
+    idnum:{
+   type:Number,
    required:true
     },
     paid:{
