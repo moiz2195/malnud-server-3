@@ -7,7 +7,7 @@ const bodyParser=require('body-parser')
 const errorMiddleware=require('./middlewares/errorhandler.js')
 // app.use(cors())
 app.use(cors({
-  origin : 'http://malnud.wisemonk.xyz',
+  origin : 'http://malnad.wisemonk.xyz',
 }))
 connecttomongo();
 app.use(express.json({limit: '50mb'}));
