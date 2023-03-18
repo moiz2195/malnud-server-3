@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const uri='mongodb+srv://malnud:malnud@cluster0.jzkouaj.mongodb.net/Malnud?retryWrites=true&w=majority';
+const uri='secret';
 const connecttomongo=()=>{
     mongoose.connect(uri).then((data)=>{
         console.log('Connected to databse successfully '+ data.Connection.name)
